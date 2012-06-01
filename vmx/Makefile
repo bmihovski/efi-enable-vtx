@@ -34,7 +34,8 @@ OBJCOPY := objcopy
 
 # Targets
 #
-TARGETS = vmx-var-set.efi hello.efi hanoi.efi
+SOURCES = $(wildcard *.c)
+TARGETS = $(SOURCES:.c=.efi)
 
 all: $(TARGETS)
 
